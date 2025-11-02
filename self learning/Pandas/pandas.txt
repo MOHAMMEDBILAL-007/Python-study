@@ -1,0 +1,101 @@
+pandas 1
+
+data manipulation: changing ,organising or preparing data to make it useful and easier to understand
+data analysis: extracting patterns ,trends and insights from the data to solve problems
+
+pandas is a python open source library designed for data manipulation and data analysis
+it fimplifies working with structured datasets like tables spreadsheets or time series data.
+
+key features 
+. works well with csv and excel data formats
+. handels missing values easily 
+. build on numpy for fast computation
+
+series : 
+-it is a one dimensional labeled array that can hold any datatype
+-each element in the series has a unique label called an index
+
+data frame :
+- it is a 2 dimensional labeled data structure in pandas 
+- it is similar to table in database 
+- it consists of rows and columns 
+	-rows have indices 
+	-columns have names
+
+encoding in file system , it is a format in which data is stored so that system can understand the data
+there are 2 standard encoding systems in data science 
+1. utf-8
+2. latin1
+some systems dont have the builtin system to encode automatically so we need to specify the encoding during the creation of dataframe
+
+how to create a dataframe using pandas
+
+refrence = pandas.read_csv("file name (or) location")
+
+specifying encoding standard 
+refrence = pandas.read_csv("file name (or) location",encoding = "latin1")
+
+to remove index column 
+refrence = pandas.read_csv("file name (or) location",index= False)
+here we will get a problem if there is no index then 1st column will become index
+then we are unable to access the column for manipulation
+
+print(referance)
+prints the dataframe
+
+create a new dataframe and store the data in a file
+to remove index column give index = false
+------------------------------------------------------------------------------------------------------------------------------------------
+pandas 2
+before working with a dataset we need to understand the data set meaning we need to analyse the data
+
+steps :
+understand the data 
+identify the problems
+plan the next steps/manipulation of data
+
+data understanding 
+- we need to under stand the structure of the data 
+
+there are some basic codes in pandas to verify the dataset like its structur ,arrangement etc
+1. df.head() # stores first 5 rows of the data by default but we can modify that 
+2. df.tail() # stores the  last 5 rows of the data by default but we can change that
+
+identifying problems
+how many column and rows
+what type of data
+missing data
+
+for these problems we have 
+info() # this method has the info on the data
+. number of rows and columns
+. column names 
+. datatype of the data 
+. non null values count
+. memory usage
+
+and one more function ie,
+it is a powerful method
+describe() # this method describes some important statistical representations and calculations of the dataset
+. it only describes to the numerical columns 
+. count # representing the elements present in those following column
+. mean of the values
+. standard deviation
+. min # minimum value of the column
+. 25% # bottem 25% of the sorted column
+. 50% # middle element of the sorted column 
+. 75% # top 25% of the sorted column
+. max max value in the column
+
+and before doing the manipulation of data we need to know 2 things
+. how big the dataset is 
+. what are the names of the columns 
+for this we have
+. shape()
+. columns()
+this will return a tuple of the info
+
+manipulation of the data
+. select specific column
+. filter rows
+. combine multiple conditions

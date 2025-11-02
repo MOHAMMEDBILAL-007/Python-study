@@ -1,0 +1,313 @@
+np 1 
+it is package for numerical computation
+it is a python library that provides multidimensional arrays ,matrixes 
+and it provides large number of functions to operate on them
+
+array: 
+is a grid of values 
+
+numpy array:
+it contains the information about the raw data how to locate an element
+,and how to interpret an element
+types 1d ,2d ,3d ,higher dimensional array
+
+advantages of using numpy array over python lists:
+- consumes less memory
+- fast compared to the python lists
+- convenient to use
+
+how they look like:
+list : [1,2,3,4]
+array : [1 2 3 4]
+
+
+
+in 1d array there is 1 axis ie, axis0
+in 2d array there are 2 axis axis0 and axis1
+
+ex id :
+	 axis0
+	------->
+	[1,2,6,4,7,9,3,5]
+	
+ex 2d :
+	   axis1
+	  ------>
+axis0| [[2,3,4],
+	 |  [5,7,4],
+	 |  [2,5,7]]
+	 V
+	 
+
+----------------------------------------------------------------------------------------------------------------------
+np 2
+how to create an array 
+we use np.array([])
+
+all numpy arrays are classified into ndarray data type means 'n dimensional array'
+in numpy we can give the d type to the array if we want we can give it as a float or int 
+we can also specify the number of bits the elements should use 
+but by default it is int64
+to create higher dimension array
+np.array(arr,ndim = 10) # this creats a 10 dimensional array
+
+accessing elements of the array
+print(arr[r,c])
+r = row 
+c = collumn
+for 1d array only collumn
+
+to get shape of the array
+arr.shape
+
+to get dtype of the elements 
+arr.dtype
+
+to get dimensions of the array 
+arr.ndim
+
+we can directly change the elements at the following positions 
+
+similar to lists np array also has its own methods like append delete insert  sum avg etc
+but key difference is they don't modify the orignal array but they return a copy of the modified array
+
+-------------------------------------------------------------------------------------------------------------------------
+np 3
+methods of creating numpy arrrays
+
+1. Conversion from other Python structures (i.e. lists and tuples)
+
+2. Intrinsic NumPy array creation functions (e.g. arange, ones, zeros, etc.)
+1. From existing data
+np.array(object) → Create array from list/tuple/etc.
+np.asarray(object) → Similar to array, avoids copy if possible.
+np.copy(a) → Explicit copy of an array.
+🔹 2. Creating constant arrays
+np.zeros(shape, dtype=float) → Array filled with 0s.
+np.ones(shape, dtype=float) → Array filled with 1s.
+np.full(shape, fill_value) → Array filled with a given constant.
+np.empty(shape) → Uninitialized array (whatever is in memory).
+🔹 3. Creating identity & diagonal arrays
+np.eye(N, M=None, k=0) → Identity matrix.
+np.identity(n) → Identity array (square).
+np.diag(v, k=0) → Diagonal array from given values.
+np.tri(N, M=None, k=0) → Lower triangular matrix.
+🔹 4. Creating sequences
+np.arange(start, stop, step) → Like Python’s range, but returns array.
+np.linspace(start, stop, num) → Evenly spaced values between start & stop.
+np.logspace(start, stop, num) → Logarithmically spaced values.
+np.geomspace(start, stop, num) → Geometric progression.
+🔹 5. Random arrays (via numpy.random)
+np.random.rand(d0, d1, …) → Uniform distribution [0,1).
+np.random.randn(d0, d1, …) → Standard normal distribution.
+np.random.randint(low, high, size) → Random integers.
+np.random.random(size) → Random floats [0,1).
+np.random.choice(a, size) → Random sampling.
+🔹 6. Special arrays
+np.zeros_like(array) → Array of zeros with same shape/dtype as another.
+np.ones_like(array) → Array of ones with same shape/dtype.
+np.full_like(array, fill_value) → Filled with a constant.
+np.empty_like(array) → Uninitialized, same shape.
+
+3. Replicating, joining, or mutating existing arrays
+1. Reshaping / Restructuring
+Change the shape or view of arrays (without changing data unless forced).
+reshape(a, newshape) → Reshape without changing data.(to reshape a 1,n array we need to use reshape(1,-1))
+ravel(a) → Flatten to 1D (returns a view if possible). this may change the orignal array if the flatt array elements are changed
+flatten() → Flatten to 1D (always returns a copy).
+resize(a, new_shape) → Resize in-place, can repeat/truncate data.
+squeeze(a) → Remove axes of length 1.
+expand_dims(a, axis) → Add a new axis.
+moveaxis(a, src, dst) → Move axes around.
+swapaxes(a, axis1, axis2) → Swap two axes.
+transpose(a, axes=None) → Permute dimensions.
+ndarray.T → Shorthand for transpose.
+🔹 4. Replication / Tiling
+Repeat elements or arrays.
+repeat(a, repeats, axis=None) → Repeat elements.
+tile(a, reps) → Repeat the whole array.
+🔹 5. Adding / Removing Elements
+Modify array content size.
+append(arr, values, axis=None) → Append values.
+insert(arr, index, values, axis=None) → Insert values.
+delete(arr, obj, axis=None) → Delete elements.
+unique(arr) → Get unique values.
+trim_zeros(arr) → Remove leading/trailing zeros (1D only).
+🔹 6. Element Mutation (In-place modifications)
+Change values inside arrays.
+Direct assignment: arr[i] = x
+Slice assignment: arr[1:3] = [a, b]
+Boolean indexing: arr[arr > 10] = 0
+Fancy indexing assignment: arr[[0, 2]] = [99, 88]
+fill(value) → Fill entire array in-place.
+🔹 7. Shape/Structure Helpers
+Useful for broadcasting and reshaping.
+broadcast_to(array, shape) → Broadcast without copying.
+expand_dims(a, axis) → Add new dimension.
+squeeze(a) → Remove singleton dimensions.
+4. Reading arrays from disk, either from standard or custom formats
+5. Creating arrays from raw bytes through the use of strings or buffers
+6. Use of special library functions (e.g., random)
+--------------------------------------------------------------------------------------------------------------------------
+np 6
+datatypes in numpy array
+np.int8 → 8-bit signed integer (−128 to 127)
+np.int16 → 16-bit signed integer
+np.int32 → 32-bit signed integer
+np.int64 → 64-bit signed integer
+np.uint8 → 8-bit unsigned integer (0 to 255)
+np.uint16 → 16-bit unsigned integer
+np.uint32 → 32-bit unsigned integer
+np.uint64 → 64-bit unsigned integer
+Floating Point
+np.float16 → Half precision float
+np.float32 → Single precision float
+np.float64 → Double precision float (default for floats in NumPy)
+np.float128 (platform dependent, not always available)
+Complex Numbers
+np.complex64 → Complex number (2 × 32-bit floats)
+np.complex128 → Complex number (2 × 64-bit floats, default)
+np.complex256 (platform dependent)
+🔹 Boolean Type
+np.bool_ → Boolean (True/False, stored as 1 byte)
+🔹 String & Unicode
+np.string_ → Fixed-length ASCII string
+np.unicode_ → Fixed-length Unicode string
+🔹 Other Types
+np.object_ → Arbitrary Python objects
+np.void → Raw data (for structured arrays, records, binary data)
+
+
+dtype of string is --- <u1
+dtype of mixture of string and numbers <u11
+-------------------------------------------------------------------------------------------------
+np 7
+arthematic operations on numpy arrays
+1d array corresponding elements are operated
++,-,/,*,**,%
+appart from directly using symbols we have functions for the arthemetic operations
+
+2d arrays also are the same like the shape must be same the corresponding elements will be operated
+
+arthematic functions in numpy
+np.min()
+np.max()
+np.argmin()
+np.sqrt()
+np.sin()
+np.cumsum()
+----------------------------------------------------------------------------------------------------
+np8
+what is broadcasting error?
+-> this error occurs when the dimensions of the array are not same 
+what is broadcasting?
+-> is numpy's way of performing arthematic operations on arrays of different shape
+how it is done?
+-> it has 2 rules 
+1) dimension matching - matches dimensions from right to left if the dimensions are same then it performs the operation
+2) the operation is carried out if even one of the end dimensions is 1
+
+if met the rules,
+numpy will stretch (broadcast) the smaller dimension to match the larger one
+The result shape is the maximum along each dimension
+
+indexing in array is similar to list in python 
+-ve indexing also exist in array
+
+array sclicing is also simiar to list in python 
+syntax arr[start:stop:step]
+for 1D array it is simple but for 2d array it is different
+for multiple rows sclicing you can just use normal sclicing but start with a row index and end with a row index
+
+for just a single row
+syntax arr[row,column:]
+
+for different rows slicing in mid
+arr[[1,3]] returns row1 and row3
+
+Slice multiple rows + specific columns
+arr[1:3, 0:2]  rows 1-2, columns 0-1
+
+Fancy slicing with :
+arr[[0, 2], :]  rows 0 and 2, all columns
+-------------------------------------------------------------------------------------------------------------------------
+np 9
+copy vs view
+basically both copy and view provides a copy of tha array
+
+difference
+copy 
+* copy owns the data 
+* the copy of an array is new array
+*changes made on the copy dosent reflest on the orignal array
+
+view 
+*the view doesent own the data 
+*it is a view of the orignal data
+*changes made in the view reflects on the orignal array and the changes made on the orignal array reflects on the view
+---------------------------------------------------------------------------------------------------------------------------------------
+np 10
+join or split an array
+
+1. Joining / Concatenation
+Combine multiple arrays.
+concatenate((a1, a2, …), axis=0) → Join along an existing axis.
+stack(arrays, axis=0) → Join along a new axis.
+hstack((a1, a2, …)) → Stack horizontally.
+vstack((a1, a2, …)) → Stack vertically.
+dstack((a1, a2, …)) → Stack along depth (3rd axis).
+block(arrays) → Assemble arrays in block form.
+2. Splitting
+Opposite of joining — break arrays into parts.
+split(a, indices_or_sections, axis=0) → General splitting.
+array_split(a, sections, axis=0) → Allows unequal splits.
+hsplit(a, sections) → Split along columns.
+vsplit(a, sections) → Split along rows.
+dsplit(a, sections) → Split along depth.
+-------------------------------------------------------------------------------------------------------------------------------------------
+np 11
+numpy array functions
+search:
+np.where()
+sort:
+np.sort() # this can be done for both alphabets and digits
+
+search sorted
+np.searchsorted(arr,[elements],side)
+it returns the list of index of the following elements in a sorted array
+but if the element doesent exist in the sorted it returns list of index where the element can be placed
+
+filter:
+a method for creating new array using existing elements of an existing array
+create an boolean datatype list 
+syntax:
+arr = np.array([])
+f =[True,False,False,True........]
+filtered_array = arr[f]
+where there is true the same index of arr will be taken for the filtered_array
+
+shuffle:
+np.random.shuffle(arr)
+this changes the orignal array 
+
+unique:
+returns a copy of the unique elements from the array
+np.unique(arr)
+
+insert :
+np.insert(arr,position,value)
+returns a copy of the array with inserted value
+-------------------------------------------------------------------------------------------------------------------------------------------------
+np 12
+
+matrix in numpy
+a 2d array in numpy is simiar to a matrix except for terms like the multiplication of matrix and array
+remember that for matrix multiplication of (m,n) and (p,q) n should be equal to p (n=p)
+or else you will get a broadcasting error
+
+matrix functions
+transpose:
+swapaxes:
+inverse :
+power matrix:
+deteminant :

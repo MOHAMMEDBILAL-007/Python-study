@@ -1,0 +1,8 @@
+important skills 
+mern stack
+golang
+rust
+devops
+docker--v i
+cloud-- v i
+aws-- v i
