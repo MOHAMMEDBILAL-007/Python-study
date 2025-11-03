@@ -95,7 +95,85 @@ for this we have
 . columns()
 this will return a tuple of the info
 
-manipulation of the data
+to plan the next step of the data analysis
 . select specific column
 . filter rows
 . combine multiple conditions
+---------------------------------------------------------------------------------------------------------------------------------------
+pandas 3 
+data manipulation
+. adding column
+. updating values
+. removing column
+. replacing column
+. handling missing values
+
+
+adding column
+df["column_name"] = [data] 
+or
+df.insert(location of the column,column name,data)
+
+updating values
+df.loc[row_index,"column_name"] new value
+
+deleting a row or a column
+df.drop(columns = [column_name],inplace = True)
+
+handeling missing values 
+pandas represents missing values in 2 types ie
+. NaN (not a number)
+. None (for objects)
+
+to check the missing values we have
+df.isnull() # this returns a table containing boolean values ie false for values and true for missing values
+or
+df.isnull().sum() # this will return the number of missing values in every column
+
+we can either drop the column or row containg missing values
+or 
+we can fill the missing values
+
+for droping the row 
+df.dropna(axis = 0 ,inplace = True)
+for droping a column
+df.dropna(axis = 1 ,inplace = True)
+
+for fixing the missing values we have 
+df.fillna(val,inplace = True)
+-------------------------------------------------------------------------------------------------------------------------------------------------
+pandas 4
+interpolation
+filling a missing value with an estimated value for a numerical method
+. used to preserve data integrety
+. smooth trends
+. to avoide data loss 
+
+in pandas we have
+interpolation(method)
+there are lots of interpolation methods but commonly used ones are
+linear
+polynomial
+time
+splean
+quadratic
+nearest
+zero
+piecewise polynomial
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+pandas 5 
+sorting
+df.sort-values(by = "column name",ascending = true for ascending order false for descending order,inplace = true)
+
+aggrigation of data
+. summary statistics - provides come of the statistical analysisof the columns
+ex : df[columnname].mean()
+     df[columnname].sum()  etc...
+
+data grouping :
+dividing the data the data into small groups
+df.groupby("column name of which with respect to grouping is done")["column name target for the following droup"]
+df.groupby(columnname)[columnname] # this provides a grouped object to get the balues we need to summaries the values
+so we need to use summary statistics like
+df.groupby(columnname)[columnname].mean()

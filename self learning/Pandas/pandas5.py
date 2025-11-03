@@ -9,4 +9,10 @@ df.sort_values(by = ["Pulse","Maxpulse"],ascending= [True,False],inplace = True)
 # one row ascending and one descending
 print(df[["Pulse","Maxpulse"]])
 
-print
+# statistics
+print("\nsum :",df["Pulse"].sum())
+print("\nmean :",df["Pulse"].mean())
+
+print(df.groupby("Duration")["Pulse"].mean())
+print(df.groupby(["Duration","Pulse"])["Maxpulse"].mean())
+
