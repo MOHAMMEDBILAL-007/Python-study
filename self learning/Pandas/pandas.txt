@@ -141,6 +141,8 @@ df.dropna(axis = 1 ,inplace = True)
 
 for fixing the missing values we have 
 df.fillna(val,inplace = True)
+for a specific column
+df['column_name'].fillna(value, inplace=True)
 -------------------------------------------------------------------------------------------------------------------------------------------------
 pandas 4
 interpolation
@@ -177,3 +179,7 @@ df.groupby("column name of which with respect to grouping is done")["column name
 df.groupby(columnname)[columnname] # this provides a grouped object to get the balues we need to summaries the values
 so we need to use summary statistics like
 df.groupby(columnname)[columnname].mean()
+to group a column withrespect to multiple columns just pass a list of the columns that we need to group by
+----------------------------------------------------------------------------------------------------------------------------------------------------
+pandas 6
+merging and joining
