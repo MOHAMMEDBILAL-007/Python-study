@@ -183,3 +183,40 @@ to group a column withrespect to multiple columns just pass a list of the column
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 pandas 6
 merging and joining
+there are 7 major types of joins
+. inner join
+. left outer join
+. right inner join 
+. full inner join
+. cross join
+. natural join
+. self join
+
+- inner join 
+	Returns only the rows that have matching values in both tables
+- left inner join 
+	returns all the rows from the left table and and matching rows from the right table
+	If no match is found, it fills with NULL
+- right inner join 
+	returns all the rows from the right table and matches rows from the right table 
+	if no match is found then it fills NULL
+- full outer join 
+	returns all the rows from both the tables and if no match is found then fills it with null
+- crossjoin
+	Combines every row of table A with every row of table B (Cartesian product)
+- self join	
+	Joins a table with itself (useful for comparing rows within same table)
+- natural join	
+	Automatically joins on columns with same name in both tables
+
+for merge we have 
+joined_df = pd.merge(fromdataframe,todataframe,on="wtr",how="type of join")
+print(joined_df)
+
+concatination of dataframe
+2 types of concatination 
+- vertically
+- horizontally
+
+for concatination we have 
+concatinate_df = pd.concat([list of tables],axis = 0 for vertically 1 for horizontal,ignore_index =True)
