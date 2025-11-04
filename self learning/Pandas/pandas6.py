@@ -14,3 +14,15 @@ df2 = pd.DataFrame({
 print(df1)
 print()
 print(df2)
+# merge 
+df_merge = pd.merge(df1,df2,on ="Id",how = "inner")
+print(df_merge)
+
+df_merge = pd.merge(df1,df2,on ="Id",how = "outer")
+print(df_merge)
+
+df_concatinate = pd.concat([df1,df2],axis = 0,ignore_index =True)
+print(df_concatinate)
+
+df_concatinate = pd.concat([df1,df2],axis = 1,ignore_index =True)
+print(df_concatinate)
