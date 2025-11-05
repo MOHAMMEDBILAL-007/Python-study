@@ -30,6 +30,7 @@ some systems dont have the builtin system to encode automatically so we need to 
 
 how to create a dataframe using pandas
 
+referance = pd.DataFrame(data)
 refrence = pandas.read_csv("file name (or) location")
 
 specifying encoding standard 
