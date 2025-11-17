@@ -116,7 +116,7 @@ or
 df.insert(location of the column,column name,data)
 
 updating values
-df.loc[row_index,"column_name"] new value
+df.loc[row_index,"column_name"] = new value
 
 deleting a row or a column
 df.drop(columns = [column_name],inplace = True)
@@ -175,7 +175,7 @@ ex : df[columnname].mean()
      df[columnname].sum()  etc...
 
 data grouping :
-dividing the data the data into small groups
+dividing the dat into small groups
 df.groupby("column name of which with respect to grouping is done")["column name target for the following droup"]
 df.groupby(columnname)[columnname] # this provides a grouped object to get the balues we need to summaries the values
 so we need to use summary statistics like

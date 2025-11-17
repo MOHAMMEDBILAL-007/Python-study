@@ -10,7 +10,6 @@ print(dict["name"])# if the key doesent exist then it throws an error
 print(dict["age"])
 #or
 print(dict.get("name"))#  if the key doesent exist it returns "none"
-
 for i in dict:# by default dictionary is iterated over keys 
     print(i)# this only prints the keys
     print(dict[i])# this only prints values

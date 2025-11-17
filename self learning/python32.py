@@ -7,7 +7,7 @@ print(s2)
 s1.update(s2)# this performs union of 2 sets and store them in s1
 print(s1)
 
-print(s1.intersection(s2))# this performs intersection on s1 and s1 but doesent change the orignal set
+print(s1.intersection(s2))# this performs intersection on s1 and s2 but doesent change the orignal set
 print(s1)
 print(s2)
 s1.intersection_update(s2)#this performs intersection 2 sets and stores the outcome in s1
