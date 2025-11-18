@@ -198,7 +198,7 @@ The default except block (like except Exception: or except:) must always be last
 python 37
 finally key word
 it is used while executing try except code 
-finally is a block of code that executes no matter whet ,wether try block is executed or except block is executed
+finally is a block of code that executes no matter what ,wether try block is executed or except block is executed
 finallykey word is usually used in functions where we return certain values the code below the return function is not executed
 if try block has return function and except block had a return function then even after returning values finally block is executed
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -227,7 +227,7 @@ Immediately raises an exception inside the generator.
 python 42
 enumerate function
 some times while a is loop executing we need to know which iteration or which index is executing 
-we can do this by using a tempraory variable iterating along with tthe loop
+we can do this by using a tempraory variable iterating along with the loop
 or
 we can use enumerate function
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -245,13 +245,13 @@ you can import your own modules and call the variables or the functions from you
 python 45
 if __name__ == "__main__"
 when we import our module we may run into some problems like
-if there is some code that is to br executed when the module is executed
+if there is some code that is to be executed when the module is executed
 function calls all will be executed as soon as we import the module in to our code
 to wether the code is being executed directly from module or from the main we use ""if __name__ == "__main__" ""
 we put this code in modules because when module is seperately executed the name variable will be main
-when imported the name variable will be name of the module so then the module code will not execute when imported
+when imported the name variable will be name of the code file so then the module code will not execute when imported
 to confirm that the code is being executed inside the main of the code
-__name__ is a python builtin variable its value is determined by the control of the code here if the controll is in the module then the name is set to name of the module
+__name__ is a python builtin variable its value is determined by the control of the code here if the control is in the module then the name is set to name of the module
 if the control is in the code then the __name__ is set to main
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 46
@@ -308,7 +308,7 @@ if a variable is created in a function or a method it cannot be accessed by outs
 a variable that is created outside of a function  it can be accessed inside of the function as long as there is no variable with the same name in the function
 if there exist a variable same name as the global variable inside the function if the variable is called then local variable is returned
 but the global variable value doesent changed due to presence of the local variable with the same name but different value
-a global variable witha the same name as the local variable are different from each other
+a global variable with the same name as the local variable are different from each other
 use the "global" key word to specify that the operation performed on the variable are actually on the global variable
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 49
@@ -321,7 +321,7 @@ mode can be
 if mode is not specified then the default mode is 'r'
 we can read a file by specifying it to be readed as text by using 'rt' mode
 if we need it to be red as binary then use 'rb' mode
-to use open function the file must exist for 'r' mode and 'a' mode
+To use open() in 'r' mode and 'a' mode, the file must already exist.
 if we use a file that doesent exist and we use 'w' mode then the file is created on its own
 after opening and performing the operation we need to close the file with .close() method
 when i open a file then can operate only once then close and open again for another operation even if the mode is same
@@ -329,6 +329,8 @@ when i open a file then can operate only once then close and open again for anot
 python 50
 methods of file handling
 .readline() reads lines of the file one by one
+note:
+	in python "",0,None are considered as false
 .readlines() reads all the lines at once from the file 
 we can use this to iterate over the text in the file
 writelines("iterable object") writes the iterable elements in the file

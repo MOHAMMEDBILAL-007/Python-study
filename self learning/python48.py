@@ -11,7 +11,8 @@ fun()
 x = 5#global
 def fun1():
     x=4# local variable this variable is different from yhe above global variable
-    print(x)
+    print(x)# local variable is called
+
 fun1()
 print(x)# global x is unchanged
 

@@ -1,5 +1,5 @@
 import my_module
-# the code inside the module
+# the code inside the my_module
 # def welcom():
 #     print("you are well come bro")
 # value = 999

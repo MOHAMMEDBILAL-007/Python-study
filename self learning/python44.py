@@ -1,4 +1,4 @@
-# import function
+z# import function
 
 import math # imports the whole module and all the functions of the module are accessable
 a = math.pi# here if you need to accesss a function you need a to write the math. prefix

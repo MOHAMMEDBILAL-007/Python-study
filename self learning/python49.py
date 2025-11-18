@@ -24,6 +24,7 @@ f = open("manage 49.txt",'a')# adds the follwing lines to existing  text means a
 f.write("\nits hard to see the people you made memories with slowly become ypur memory")
 f.close()
 # this method is too complicated because every time we open we need to make sure to close after performing the operation
+
 # so we use 'with' keyword which automatically closes
 with open("manage 49.txt",'a') as f:
     f.write("\niam not wrong what's wrong ,is this messedup world")
