@@ -331,6 +331,7 @@ methods of file handling
 .readline() reads lines of the file one by one
 note:
 	in python "",0,None are considered as false
+
 .readlines() reads all the lines at once from the file 
 we can use this to iterate over the text in the file
 writelines("iterable object") writes the iterable elements in the file
@@ -341,7 +342,7 @@ after oprning a file if we used seek() method like seek(9) this will decide that
 after that if i used read() method then the file will be reded from 10 position
 tell() is used to identify the on which position the control is in
 truncate() this is used to specify that file should only contain the following number of charecters
-truncate(10) this means only 10 charectors should be in the filr other than that there should be no charecters
+truncate(10) this means only 10 charectors should be in the file other than that there should be no charecters
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 52
 lambda functions
