@@ -19,18 +19,21 @@ print(nl1)
 nl2 =list(map(cube,l1))# map function takes 2 arguments 1 the function to perform and other on which iteratable object to perform
 print(nl2)
 
+# it can also be used to map the input to a list
+lll = list(map(int,input("enter numbers seperated by commas :").split(",")))
+
 # FILTER
 #function that checks the crediblity of the given element
 def fil_fun(a):
     return a>4
 
 #filter function filters the following list with respect to filter_function()
-nl3=list(filter(fil_fun,l1))#the fil_fun must return bool datatype for every element of the l1
+nl3=list(filter(fil_fun,l1))#the fil_fun must return bool datatype for every element of the l1 if true then enter the number to the list or else not entered the list
 print(nl3)
 
 #REDUCE
 from functools import reduce
 
 nums = [1, 2, 3, 4, 5]
-result = reduce(lambda x, y: x + y, nums)# use lambda functions for smaller code
+result = reduce(lambda x, y: x + y, nums)
 print(result)
