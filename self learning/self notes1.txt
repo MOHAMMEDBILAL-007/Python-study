@@ -391,7 +391,9 @@ the proccess of extending the existing solution
 the child class inheriting the parent class 
 
 another feature is polymorphism this concept that allows objects of different classes to be treated as objects of a common type
-
+	Polymorphism With Classes (Method Overriding)
+	Polymorphism With Functions
+	Polymorphism With Operators
 Abstraction in Object-Oriented Programming (OOP) is the concept of hiding complex implementation details and showing only the essential features of an object or system to the user
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 57
