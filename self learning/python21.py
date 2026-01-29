@@ -1,7 +1,7 @@
 #function arguments
 
 # required arguments 
-# a and b are the required arguments meaning we must and shoould give the arguments or else we will get error
+# a and b are the required arguments meaning we must and should give the arguments or else we will get error
 def add(a,b):
     print(a+b)
 # here we can give this a and b directly

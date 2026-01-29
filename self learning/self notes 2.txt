@@ -2,12 +2,12 @@ python - 20
 function:
 function is a block of code that is reusable 
 it helps reduce the code size where we use certain code again and again
-to write a function we need a key word 'def' that defines that a funcyion is being defined
+to write a function we need a key word 'def' that defines that a function is being defined
 we need to write the body of the function inside the indentation of the function
 if we dont want to write the body of the function we can use a key word 'pass'
 pass is used as a 'placeholder' when a function or code block is defined but no logic is implemented yet, to avoid syntax errors.
 Real-world scenario: While working in a team, one developer might define the function structure but leave the implementation for later, using pass to keep the code valid.
-pass means there is nothing to exicute but the good part is that you wont get an error
+pass means there is nothing to execute but the good part is that you wont get an error
 this is usefull while coding in groups, one part of the code is written by one person as a function and other part can be written by some one else
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ insert(i, x)->      Inserts item x at position i.
 remove(x)->         Removes the first occurrence of item x. Raises ValueError if not found.
 pop([i])->      	Removes and returns the item at position i. If no index is specified, removes the last item.
 clear()	->          Removes all items from the list.
-index(x[, start[, end]])->	Returns the index of the first occurrence of item x. Raises ValueError if not found.
+index(x[ start[ end]])->	Returns the index of the first occurrence of item x. Raises ValueError if not found.
 count(x)->      	Returns the number of occurrences of item x.
 sort(key=None, reverse=False)->	Sorts the list in ascending order. Can be customized using key and reverse.
 reverse()->     	Reverses the elements of the list in place.
@@ -54,7 +54,7 @@ copy()->        	Returns a shallow copy of the list.
 	if a new variable is created as = as the orignal 
 	variable it also points to the same address
 	there is no copy is being made for the new variable 
-	so if the new variable changes then tha old variable also changes
+	so if the new variable changes then the old variable also changes
 	to avoide such conflict we use copy function	
 """
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
