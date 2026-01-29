@@ -1,4 +1,4 @@
-z# import function
+# import function
 
 import math # imports the whole module and all the functions of the module are accessable
 a = math.pi# here if you need to accesss a function you need a to write the math. prefix
@@ -21,7 +21,7 @@ print(s(9))# square root of 9
 
 print(dir(math))# this returns all the functions in the module
 
-# all the allowed implimentations are allowed for my own module
+# all the above implimentations are allowed for my own module too
 import my_module # importing my own module 
 # this can work exactly same as the official modules
 print(my_module.value)

@@ -41,4 +41,3 @@ a.discard(8)# this also removes the element from set
 a.pop() # this will remove a random value as set is un-ordered , and it will return the poped value
 del a # this will delete the set from the code 
 s2.clear() # this will not delete the set from the code but delete the all elements from set
-

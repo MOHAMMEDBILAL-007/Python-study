@@ -148,7 +148,7 @@ discard(elem)	Removes an element if it exists (no error if not)
 pop()	Removes and returns an arbitrary element
 clear()	Removes all elements from the set
 copy()	Returns a shallow copy of the set
-union(set)	`A	B`
+union(set)	`A|B`
 intersection(set)	A & B	Returns intersection
 difference(set)	A - B	Returns difference
 symmetric_difference(set)	A ^ B	Returns symmetric difference

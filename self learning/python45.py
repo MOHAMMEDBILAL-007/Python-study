@@ -5,7 +5,7 @@ import my_module
 # value = 999
 
 # print(__name__)
-# if __name__=="__main__":# this makes sure that when module is imported there is no need to execute the following program
+# if __name__=="__main__":# this makes sure that when module is imported there is no need to execute the following part
 #     print("hello")
 #     welcom()
 

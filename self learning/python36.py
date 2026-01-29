@@ -30,5 +30,5 @@ except ValueError as e:
     print(e)
 except TypeError as e:
     print(e)
-except Exception:# this must be written at the last
+except Exception:# this has to be written at the last (optional) it is like a default case
     print("error has occured")

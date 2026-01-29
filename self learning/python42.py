@@ -7,8 +7,8 @@ for mark in marks:# here iam using a tempraory variable to calculate the iterati
     index +=1
 
 
-# but by usin enumerate function
-for index,mark in enumerate(marks):# here I don't need another tempraory variable 
+# but by using enumerate function
+for index,mark in enumerate(marks):# here we don't need another tempraory variable 
     print(mark)
     if index == 5:
         print("good")
