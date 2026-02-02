@@ -37,3 +37,15 @@
 #     print(i)
 #     if i >5:
 #         break
+
+import os
+
+os.chdir("d:\learning\Python-study\self learning")
+
+with open("manage 49.txt") as f:
+    while True:
+        if not f.readline():
+            break
+        print(f.readline())
+    
+        

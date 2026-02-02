@@ -1,3 +1,5 @@
+import os
+os.chdir("d:/learning/Python-study/self learning/")# you should know by now why this is here
 # file handeling in python
 # reading the file
 f = open("manage 49.txt",'r')
