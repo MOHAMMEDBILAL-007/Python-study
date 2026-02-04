@@ -27,5 +27,3 @@ f = open("manage.txt",'w')
 f.write("bro what did you do")# this is written
 f.truncate(5)# even though i have written a string so long but in the file there exist only 5 charecter
 f.close()
-
-

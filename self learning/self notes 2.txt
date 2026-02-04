@@ -19,7 +19,7 @@ key word arguments
 variable length arguments
 required arguments
 "in a function if there are multiple return functions then the first to return is only considered then returned to the function"
-If you use **args for variable-length keyword arguments, they are collected into a dictionary.
+If you use **args for variable-length keyword arguments, they are collected into a dictionary if you want to put input values in the kwargs take input in the form of dictionary.
 we can pass a function as an a argument to another function 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 22
@@ -160,7 +160,7 @@ python 33
 dictionaries
 it is a combination of key value pairs
 they are ordered collection
-each key kan store multiple values 
+each key can store multiple values 
 they are stored inside "{}" seperated by "comma" but key and values are seperated by ":"
 they cannot be accessed by index
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -184,7 +184,7 @@ loop with else
 in python else statment can also be used with loops 
 after execution or before execution of the loop when the condition given to the loop becomes false the else is executed
 it means else block is executed only when the loop is completed or loop cannot be executed at all
-when the loop is breaked in the middel of the execution then also the else block doesen't exicute
+when the loop is breaked in the middel of the execution then the else block is not exicute
 it is used with both for and while loop
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 36
@@ -199,8 +199,8 @@ python 37
 finally key word
 it is used while executing try except code 
 finally is a block of code that executes no matter what ,wether try block is executed or except block is executed
-finallykey word is usually used in functions where we return certain values the code below the return function is not executed
-if try block has return function and except block had a return function then even after returning values finally block is executed
+finally key word is usually used in functions where we return certain values the code below the return function is not executed
+if try block has return function and except block also had a return function then even after returning values finally block is executed
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 38
 raising custom errors
@@ -226,7 +226,7 @@ Immediately raises an exception inside the generator.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 42
 enumerate function
-some times while a is loop executing we need to know which iteration or which index is executing 
+some times while a loop is executing we need to know which iteration or which index is executing 
 we can do this by using a tempraory variable iterating along with the loop
 or
 we can use enumerate function
@@ -240,7 +240,7 @@ you can import the whole modules but you need to specify the module name in the 
 you can import the specific function from the module
 you can import the module as a shortform and use that as the prefix while calling the function
 you can import the specific function from the module as a short form then directly use the short form function
-you can import your own modules and call the variables or the functions from your whole file
+you can import your own modules and call the variables or the functions from your own module
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 45
 if __name__ == "__main__"
@@ -251,8 +251,8 @@ to wether the code is being executed directly from module or from the main we us
 we put this code in modules because when module is seperately executed the name variable will be main
 when imported the name variable will be name of the code file so then the module code will not execute when imported
 to confirm that the code is being executed inside the main of the code
-__name__ is a python builtin variable its value is determined by the control of the code here if the control is in the module then the name is set to name of the module
-if the control is in the code then the __name__ is set to main
+__name__ is a python builtin variable its value is determined by the control of the code here if the control is not in the module then the name is set to name of the src code
+if the control is in the module then the __name__ is set to main
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 46
 OS module in python

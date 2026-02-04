@@ -38,14 +38,23 @@
 #     if i >5:
 #         break
 
-import os
+# import os
 
-os.chdir("d:\learning\Python-study\self learning")
+# os.chdir("d:\learning\Python-study\self learning")
 
-with open("manage 49.txt") as f:
-    while True:
-        if not f.readline():
-            break
-        print(f.readline())
+# with open("manage 49.txt") as f:
+#     while True:
+#         if not f.readline():
+#             break
+#         print(f.readline())
     
-        
+def fact(x):
+    return x if x<=1 else x*fact(x-1)
+print(fact(5))
+def mfact(x):
+    f = 1
+    for i in range(1,x+1):
+        f*=i
+    return f
+print(mfact(5))
+
