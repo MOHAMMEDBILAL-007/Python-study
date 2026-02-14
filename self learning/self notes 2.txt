@@ -1,3 +1,32 @@
+python - 19
+-Note:
+ascii = "American standard code for information interchange"
+ascii table uses 7bits ie, 128 unique numbers starting from 0 to 127
+it helps machine to understand human text
+in python we can use ascii value to print characters 
+print(chr(65)), output: A
+print(chr(96)),output : a
+
+like wise we can print ascii values from the charactors
+print(ord('A')), output: 65
+print(ord('a')),output : 6
+
+we can use this to print alphabets in a loop
+for i in range(65,91):
+	print(chr(i),end= " ")
+output:A B C D E ...... Z
+
+we can do charactor comparison like this 
+print('A' < 'B') ,output: True
+print('a' > 'A') ,output: True
+here ascii values are compared 
+important ascii ranges
+A-Z  65-90
+a-z  97-122
+0-9  48-57
+
+best way to use characters is by importing string module
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 python - 20
 function:
 function is a block of code that is reusable 
@@ -346,7 +375,7 @@ truncate(10) this means only 10 charectors should be in the file other than that
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 52
 lambda functions
-a lambda function is a small anonymus function without a name it defines using lambda key word and has the following syntax
+a lambda function is a small anonymus function without a name it is defined using lambda key word and has the following syntax
 function_name = lambda arguments : expression this the variable itself can be used insted a function
 
 lambda functions usually used to make 'mini functions' for certain expressions 
@@ -357,7 +386,7 @@ lambda functions can take all the different types of arguments as a normal funct
 python 53
 map,filter,reduce in python
 
-map function is used to map a set of elements into a list 
+map function is used to map a set of elements into an iteratable it can be a list or number of varialbes 
 filter function filters an iteratable like list based on the condition set by the function 
 reduce function should be imported from functools 
 The reduce() function in Python is used to reduce a sequence of values to a single value
@@ -390,7 +419,7 @@ the proccess of extending the existing solution
 (or)
 the child class inheriting the parent class 
 
-another feature is polymorphism this concept that allows objects of different classes to be treated as objects of a common type
+another features is polymorphism is a concept that allows objects of different classes to be treated as objects of a common type
 	Polymorphism With Classes (Method Overriding)
 	Polymorphism With Functions
 	Polymorphism With Operators
@@ -409,17 +438,28 @@ python 58
 constructors
 these are special methods in class used to create  and initialize an object 
 constructor in automatically invoked when an object of a class is created 
-here ve use 'self' variable which is builtin keyword
+here we use 'self' variable which is builtin keyword
 self refers to the present instance on which the object is created and operated
 methods with self variable is called instance method meaning it is only associated with the following instance only 
-__init__ is a special method in Python classes. It's also called a constructor.
+__new__ is a special method that is called first when ever an object is created 
+it is an object creator that creates an empty object in the memory then __init__ will fill the object
+after creating it must return the obj reference
+class c:
+	def __new__ (cls):
+		return super.__new__(cls)
+if we dont return the object then __init__ will not run
+when creating an object we the same arguments are passed to both __new__ and __init__ 
+so we need to give the same argunents to __new__ that we are planning to give to __init__ method
+so there is another way if you are not sure that how many are you gonna give in init so we can use this
+*args,*kwarge we dont know what we are going to give in init so all the init arguments givel while creating an object all of them will passed to __new__
+__init__ is a special method in Python classes. it is an initalizer ,It's also called a constructor.
 It initializes a new object when you create an instance of a class.
 __init__ method always returns none
 when a constructor doesent accept any arguments from object and has only one argument'self'then the constructor is default constructor
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 59
 decorators
-decorators are tools that allows to modify the behavior of the fubnctions and methods
+decorators are tools that allows to modify the behavior of the functions and methods
 they take functions as argument and modify  the function then return the modified function which is also called as decorated function
 When a function requires arguments, the decorator must be designed to accept those arguments too.
 decorators are powerful tools they are able to change the purpose of the function
