@@ -48,13 +48,23 @@
 #             break
 #         print(f.readline())
     
-def fact(x):
-    return x if x<=1 else x*fact(x-1)
-print(fact(5))
-def mfact(x):
-    f = 1
-    for i in range(1,x+1):
-        f*=i
-    return f
-print(mfact(5))
+# def fact(x):
+#     return x if x<=1 else x*fact(x-1)
+# print(fact(5))
+# def mfact(x):
+#     f = 1
+#     for i in range(1,x+1):
+#         f*=i
+#     return f
+# print(mfact(5))
 
+def fib(x):
+    if x == 0 :
+        return 0
+    elif x == 1 :
+        return 1
+    else :
+        return fib(x-1)+fib(x-2)
+i = int(input("Enter till where you want to print fibonacci series : "))
+for i in range(i+1):
+    print(fib(i),end = " ")

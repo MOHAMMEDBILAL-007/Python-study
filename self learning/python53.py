@@ -18,9 +18,10 @@ print(nl1)
 # so we use map function
 nl2 =list(map(cube,l1))# map function takes 2 arguments 1 the function to perform and other on which iteratable object to perform
 print(nl2)
-
 # it can also be used to map the input to a list
 lll = list(map(int,input("enter numbers seperated by commas :").split(",")))
+# it can also be used to map multiple variables from a single input
+x,y,z = map(int,input("enter the value of x , y , z seperated by comma :").split(','))
 
 # FILTER
 #function that checks the crediblity of the given element
