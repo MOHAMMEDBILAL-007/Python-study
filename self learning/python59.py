@@ -30,3 +30,26 @@ def add(*a):
    print(sum(a))
 add(1,2,3,4,5,6,7)
 
+# lets take an alnalogy 
+# we are building a maps for games different map is of different style
+#lets create some decorators for the map
+def cyberpunk(f):
+    def mf(*args,**kwargs):
+        print("changing the design of the buildings to cyber punk style")
+        f(*args,**kwargs)
+        print("successfully implemented")
+    return mf
+def apocalyptic(f):
+    def mf(*args,**kwargs):
+        print("changing the design of the buildings to ruins style")
+        f(*args,**kwargs)
+        print("successfully implemented")
+    return mf
+
+def building(no,avgs):
+    print(f"building {no} buildings with average height of {avgs} floors ")
+building(100,98)
+
+cyberpunk(building)(200,65)
+
+apocalyptic(building)(100,100)

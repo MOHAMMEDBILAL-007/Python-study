@@ -25,7 +25,7 @@ class college:
         self._course = None
         self._uid =None
 # must give same name for getter and setter
-    @property# this makes the method to appear as a property of the class
+    @property# this decorator makes the method to appear as a property of the class
     def details(self):# whenever this is called the 'property' decorator already gets the details
         return f"{self._name}\n{self._course}\n{self._uid}"
     

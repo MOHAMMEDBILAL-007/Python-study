@@ -58,13 +58,42 @@
 #     return f
 # print(mfact(5))
 
-def fib(x):
-    if x == 0 :
-        return 0
-    elif x == 1 :
-        return 1
-    else :
-        return fib(x-1)+fib(x-2)
-i = int(input("Enter till where you want to print fibonacci series : "))
-for i in range(i+1):
-    print(fib(i),end = " ")
+# def fib(x):
+#     if x == 0 :
+#         return 0
+#     elif x == 1 :
+#         return 1
+#     else :
+#         return fib(x-1)+fib(x-2)
+# i = int(input("Enter till where you want to print fibonacci series : "))
+# for i in range(i+1):
+#     print(fib(i),end = " ")
+
+# class coco():
+#     def __init__(self,name,age):
+#         self._name =name
+#         self.__age = age
+#     def getter(self):
+#         return self._name,self.__age
+# s = coco("bilal",19)
+# print(*s.getter())
+
+# class cat:
+#     def __init__(self):
+#         self._name = None
+#         self._age = None
+#     @property
+#     def details(self):
+#         return self._name,self._age
+    
+#     @details.setter
+#     def details(self,det):
+#         name,age = det
+#         self._name = name
+#         self._age = age
+# s = cat()
+# s.details = ("bilal",20)
+# print(*s.details)
+# s.name = "b"
+# print(*s.details)
+print(not None)
