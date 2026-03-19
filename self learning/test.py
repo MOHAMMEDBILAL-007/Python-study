@@ -96,4 +96,4 @@
 # print(*s.details)
 # s.name = "b"
 # print(*s.details)
-print(not None)
+# print(not None)

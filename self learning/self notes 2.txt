@@ -478,7 +478,8 @@ Compatibility	Keeps internal changes invisible to user code
 
 NOTE:
 	putting '_' before a variable means "protected by convension
-there are 2 ways f using getters and setters 
+	it doesent mean it cannot be accesed by outsider it can be,but it is just a conventional way of the coder
+there are 2 ways of using getters and setters 
 1.to set a protected value (or) to get a protected value by calling the getter or setter function 
 2.to set a protected value (or) to get a protected value by using decorators 
 2nd way is prefered by most of the proffesionals
@@ -489,6 +490,13 @@ the decorators we need to use are
 @name_of_getter.setter - turns method into a setter
 what this does is ,it looks like you are directly changing the attributes but behind the sceans there is controled mechanism that has its own merits and demerits
 
+NOTE :
+	in python empty string is considered False : "" # considerd false
+	and viseversa a non empty string is considered as True : "hello" #considered as True 
+	this comes in handy while we are working on strings in conditional statements
+	&
+	not keyword is used to reverse the logic ie, not True #means false ,not False #means True
+	not None is also true
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 61
 inheritance

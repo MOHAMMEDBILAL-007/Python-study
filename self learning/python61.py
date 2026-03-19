@@ -1,7 +1,7 @@
 # inheritance for class without constructors 
 class employ:# parent class
     def info(self):
-        print("name: ninga\nage: 20\nemp_ID: 203")
+        print("name: ninja\nage: 20\nemp_ID: 203")
 
 class programmer(employ):# child class
     def Full_info(self):
