@@ -124,6 +124,18 @@ python 28
 f string:
 it is used to string formating
 
+some important format specifiers
+
+{}	Default
+{:d}	Integer
+{:f}	Float
+{:.2f}	2 decimal float
+{:10}	Width 10
+{:>10}	Right align
+{:<10}	Left align
+{:^10}	Center align
+{:x}	Hex
+{:b}	Binary
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 29
 docstring ,pep-8
@@ -149,7 +161,7 @@ python 30
 recursion
 calling a function inside of a function is called recursion
 if we are writing a recursive code in python then we need to create a base case to terminate the recursion or else 
-recursion error will occur due to limit in number of recursions can occur
+recursion error will occur due to limit in number of recursions can occur ie, 1000
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 31
 sets
@@ -157,7 +169,6 @@ is a collection of well defined objects
 repeated values doesent exist in sets 
 set is un-ordered datastructure
 elements are stored in "{}" 
-cannot modify the elements in the set
 cannot be accessed by index 
 it can store multiple datatypes
 an empty set is considered a dictionary 
