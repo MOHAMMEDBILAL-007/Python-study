@@ -8,4 +8,4 @@ for i in string.ascii_letters:
     if i=='A':
         print()
     print(i,end = " ")
-print(string.punctuation)
+print("\n",string.punctuation)
