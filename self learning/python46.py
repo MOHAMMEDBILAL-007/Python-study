@@ -20,4 +20,9 @@ for i in os.listdir("data46"):
     ix+=1
     os.rename("data46/"+i,f"data46/tutorial{ix}")# renaming the large sum offolders at a time
 time.sleep(5)
-os.removedirs("data46/")
+l1= os.listdir("data46")
+os.chdir("data46")
+for i in l1:
+    os.removedirs(i)
+os.chdir("D:\learning\Python-study\self learning")
+os.rmdir("data46")

@@ -97,3 +97,61 @@
 # s.name = "b"
 # print(*s.details)
 # print(not None)
+
+
+# class Array:
+#     def __init__(self,size):
+#         self.size = size
+#         self.array = []
+#     def sizeval(self):
+#         if self.size == len(self.array):
+#             return True
+#         else:
+#             return False
+#     def store(self,val):
+#         self.array.append(val)
+#     def display(self):
+#         return self.array
+
+# if __name__=="__main__":
+#     n = int(input())
+#     array1 = Array(n)
+#     tl = list(map(int,input().split()))
+#     for i in tl:
+#         array1.store(i)
+#     if array1.sizeval():
+#         print(*array1.display())
+# n= int(input())
+# l1 = list(map(int,input().split()))[:n]
+# temp1 = 0
+# temp2 = -1
+# it =0
+# while it < len(l1)//2:
+#     print(l1[temp1],l1[temp2],end=" ")
+#     it +=1
+#     temp1 +=1
+#     temp2 -=1
+
+
+# class brstr:
+#     def __init__(self,string_o,string_s):
+#         self.string_o = string_o
+#         self.string_s = string_s
+#     def bruteforce(self):
+#         for i in range(len(self.string_o)-len(self.string_s)+1):
+#             if self.string_o[i:i+len(self.string_s)] == self.string_s:
+#                 return True
+#         return False
+
+# if __name__ == "__main__":
+#     ori = input()
+#     sear = input()
+#     ns = brstr(ori,sear)
+#     if ns.bruteforce():
+#         print("string matched")
+#     else :
+#         print("string not matched")
+# import os 
+# with open("manage 49.txt",'r') as file:
+#     for i in file.readlines():
+#         print(i)

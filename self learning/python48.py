@@ -10,7 +10,7 @@ fun()
 
 x = 5#global
 def fun1():
-    x=4# local variable this variable is different from yhe above global variable
+    x=4# local variable this variable is different from y above global variable
     print(x)# local variable is called
 
 fun1()
