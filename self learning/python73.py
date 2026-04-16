@@ -10,7 +10,8 @@ class employee:
     
     def __call__(self):
         print("present")
-
+    def __eq__(self,other):
+        return self.name == other.name
     def __len__(self):
         j= 0
         for i in self.name:
@@ -24,4 +25,5 @@ print(c)
 print(str(c))
 print(repr(c))
 c()
-
+c1 = employee("shadow")
+print(c.__eq__(c1))

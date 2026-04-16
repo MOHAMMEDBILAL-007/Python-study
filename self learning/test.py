@@ -155,3 +155,49 @@
 # with open("manage 49.txt",'r') as file:
 #     for i in file.readlines():
 #         print(i)
+
+# class game:
+#     def __new__(cls,*a,**b):
+#         return super().__new__(cls)
+#     def __init__(self,mode):
+#         self.mode = mode
+#     def movenent(self,move):
+#         self.move = move
+#         match move:
+#             case "w":
+#                 print("moving forward")
+#             case "a":
+#                 print("moving left")
+#             case "s":
+#                 print("moving backword")
+#             case "d":
+#                 print("moving right")
+#     def stats_display(self):
+#         self.strength = 33
+#         self.magic = 43
+#         self.stamina = 76
+#         self.vision = 99
+#         self.agility = 87
+#         print(f"mode : {self.mode}\nstrength : {self.strength} \nmagic : {self.magic}\nstamina : {self.stamina}\nvision : {self.vision}\nagility : {self.agility}")
+
+# class player(game):
+#     def __new__(cls,*a,**b):
+#         print("player created ...")
+#         return super().__new__(cls)
+#     def __init__(self,mode,age,gender):
+#         super().__init__(mode)
+#         self.mode = mode 
+#         self.age = age
+#         self.gender = gender
+#     def player_info(self):
+#         print(f"game mode {self.mode}\nage : {self.age}\ngender : male")
+# m,a,g = map(str,input("enter mode of the game,age,gender seperated by \',\' :").split(',')) 
+# player1 = player(m,int(a),g)
+# player1.player_info()
+# player1.stats_display()
+
+# class nem:
+#     def __init__(self):
+#         self._vsl = 100
+# nem1 = nem()
+# print(nem1._vsl)

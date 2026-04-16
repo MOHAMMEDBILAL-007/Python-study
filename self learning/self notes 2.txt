@@ -203,6 +203,18 @@ they are ordered collection
 each key can store multiple values 
 they are stored inside "{}" seperated by "comma" but key and values are seperated by ":"
 they cannot be accessed by index
+
+similar to python dictionary there is another format called json
+java script object notation file this file is used to store data  ex: data.json
+structure of json it must be inside of a single {} or []
+there cannot be multiple seperate {} data structures
+
+by importing builtin json module we can read and write the data into the file
+just like opening text file in python we can open json file in python
+appendind data in json doesnt work similar to text it will cause an error because it would create multiple data structures
+so we use an alternate technique ie
+copy data from the file override the data with appending into the {} structure
+then rewrite the structure
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 34
 dictionary methods
@@ -223,6 +235,7 @@ python 35
 loop with else
 in python else statment can also be used with loops 
 after execution or before execution of the loop when the condition given to the loop becomes false the else is executed
+however the else block is not executed if the loop is stopped using break keyword
 it means else block is executed only when the loop is completed or loop cannot be executed at all
 when the loop is breaked in the middel of the execution then the else block is not exicute
 it is used with both for and while loop
@@ -240,7 +253,10 @@ finally key word
 it is used while executing try except code 
 finally is a block of code that executes no matter what ,wether try block is executed or except block is executed
 finally key word is usually used in functions where we return certain values the code below the return function is not executed
-if try block has return function and except block also had a return function then even after returning values finally block is executed
+if try block has return function and except block also had a return function then even after returning values finally block is executed 
+the finally block can override the return of try or except block if it has its own return function (or) rais something like sys.exit() (or) an exception  
+in very rare cases finally block doesnt run ie, when we use os._exit(0) this will stop the execution of the program immedietly no cleanups are performed
+another case is power out or os crash
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 38
 raising custom errors
@@ -386,7 +402,7 @@ truncate(10) this means only 10 charectors should be in the file other than that
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 52
 lambda functions
-a lambda function is a small anonymus function without a name it is defined using lambda key word and has the following syntax
+a lambda function is a small anonymus function it is defined using lambda key word and has the following syntax
 function_name = lambda arguments : expression this the variable itself can be used insted a function
 
 lambda functions usually used to make 'mini functions' for certain expressions 
@@ -410,9 +426,14 @@ is compares the exact location of the object in the memory
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 56
 oop - object oriented programming
-in most programming languages there are 2 types of programming 
-1.procedural programming
-2.object oriented programming
+in most programming languages there are several types of programming 
+Procedural → Steps
+OOP → Objects
+Functional → Functions
+Logic → Rules
+Declarative → What, not how
+Event-driven → Events
+Concurrent → Parallel tasks
 oop uses classes and objects to represent the real world entity
 class is a tamplet or a blue print that decides what type of objects does it make
 it defines the properties ,data and methods that the object of the class will have
@@ -470,6 +491,7 @@ when a constructor doesent accept any arguments from object and has only one arg
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 59
 decorators
+are special functions that modifies the function or extends the properties of the function
 decorators are tools that allows to modify the behavior of the functions and methods
 they take functions as argument and modify  the function then return the modified function which is also called as decorated function
 When a function requires arguments, the decorator must be designed to accept those arguments too.
@@ -580,6 +602,9 @@ there are 4 types of methods a class can contain :
 
 now static method doesent belong to any instance 
 it doesent have self variable
+Doesn't use object data
+Doesn't use class data
+Just utility/helper function
 insted it uses @staticmethod decorator for the following method
 static methods are used to make a method that is independent of the instance and also to give the previlage of the method to the class user only
 it is accessable through the obj but it is independent of the instance it can be used any time
@@ -799,3 +824,14 @@ hybrid and hierarchical inheritance
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 83
 win 32 and SAPI(microsoft speect API)
+Win32 = the core Windows API used by programs to talk to the operating system,
+originally designed for 32-bit systems but not limited to 32 bit system it can be used in 64 bit also
+accessed using pywin32 library in python
+pywin32 is a bridge between python and os of the system ,it allows python to call low level windows functions
+
+core modules
+win32api → system-level operations
+win32gui → windows (GUI control)
+win32con → constants (flags, values)
+win32process → processes
+win32event → synchronization

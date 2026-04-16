@@ -23,8 +23,8 @@ def intro2(f):
         print("this function is made by darkblade")
         f(*ar,**kw)
         print("you should be thankful")
-        
     return mf
+
 @intro2
 def add(*a):
    print(sum(a))
