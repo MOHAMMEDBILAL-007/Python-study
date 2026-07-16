@@ -824,14 +824,81 @@ hybrid and hierarchical inheritance
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 83
 win 32 and SAPI(microsoft speect API)
-Win32 = the core Windows API used by programs to talk to the operating system,
-originally designed for 32-bit systems but not limited to 32 bit system it can be used in 64 bit also
-accessed using pywin32 library in python
-pywin32 is a bridge between python and os of the system ,it allows python to call low level windows functions
 
-core modules
-win32api → system-level operations
-win32gui → windows (GUI control)
-win32con → constants (flags, values)
-win32process → processes
-win32event → synchronization
+os ia a program that manages 
+-memory 
+-files
+-cpu
+-screen
+-input
+
+python cannot directly talk to hardware of the system so os interprits it to the hardware
+windows provide something called win32 api ie, a huge set of functions you can call to ask windows to do things
+pywin32 is a python wrapper around win32 api
+windows api is written in c so pywin32 acts like a translator
+
+important modules in pywin32
+win32api ->system functions
+win32con -> constrains
+
+win32api functionalities
+*System Information
+*File Operations
+*Process / Program Execution
+*Environment Variables
+*Time & System State
+*Hardware Interaction
+*Registry (advanced but important)
+
+1. display a message window 
+win32api.messagebox(handler,message,titel of the window,const)
+handler -> id given by the windows ie for the message box = 0
+const -> (uType) this constant or an integer flag decides what type of buttons the messege box provide ie, ok,cancle,retry,continue,yes,no
+	win32con.MB_OK
+	win32con.MB_OKCANCEL
+	win32con.MB_YESNO
+	win32con.MB_YESNOCANCEL
+	win32con.MB_RETRYCANCEL
+	win32con.MB_ABORTRETRYIGNORE etc...
+	
+	and there is one more additional factor to uType is, the visual representation for the message box
+	win32con.MB_ICONINFORMATION
+	win32con.MB_ICONWARNING
+	win32con.MB_ICONERROR
+	win32con.MB_ICONQUESTION
+	
+	win32api.MessageBox(
+		0,
+		"Something went wrong",
+		"Error",
+		win32con.MB_OK | win32con.MB_ICONERROR
+		)
+	
+	using '|' -> bitwise OR  it combines multiple flags 
+	we can set the default button 
+	we can change how thw window behaves
+	the constants are grouped into 3 bitfiles ie button bits, icon bits ,behaviour bits
+	
+	each message box gives a return value 
+	The return value depends on what button the user clicks,
+	but the flags decide which buttons are available to click
+	the return value of each button is fixed it can be viewed by
+	win32con.IDOK
+	win32con.IDYES
+	win32con.IDNO
+	win32con.IDCANCEL
+	
+	ex:
+	res = win32api.MessageBox(0, "Continue?", "Title", win32con.MB_YESNO)
+	if res == win32con.IDYES:
+		print("User said YES")
+		
+2. file operations 
+the program can interact with storage devices ,windows file system through win32api
+Copying files
+Moving files
+Deleting files
+Creating directories
+File attributes
+Error handling
+Understanding paths deeply
