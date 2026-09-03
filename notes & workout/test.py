@@ -226,3 +226,11 @@
 
 #         print(num, end=" ")
 # import sympy
+n=[1,2,47,3,2,234]
+prev1=0
+prev2=0
+for i in n :
+    current=max(prev1,prev2+i)
+    prev2=prev1
+    prev1 = current
+print(prev1)
