@@ -201,3 +201,28 @@
 #         self._vsl = 100
 # nem1 = nem()
 # print(nem1._vsl)
+
+# n = int(input())
+# m = int(input())
+
+# for i in range(n,m):
+#     prime=True
+#     if i == 1:
+#         continue
+#     for j in range(2,i):
+#         if i%j == 0:
+#             prime = False
+#             break
+#     if prime:
+#         print(i,end =" ")
+    
+# import math
+
+# low, high = 10, 50
+
+# for num in range(low, high + 1):
+
+#     if num > 1 and all(num % i != 0 for i in range(2, math.isqrt(num) + 1)):
+
+#         print(num, end=" ")
+# import sympy
