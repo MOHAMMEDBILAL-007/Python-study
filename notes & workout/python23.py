@@ -19,5 +19,3 @@ list1.sort()#sorts the elements in the asscending order
 list1.sort(reverse=True)#sorts the elements in decending order
 list1.reverse()#only reverse the elements of the list
 list2 = list1.copy()#assaigns a copy of the list1 to the list2
-
-

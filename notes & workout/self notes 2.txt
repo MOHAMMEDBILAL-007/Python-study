@@ -263,6 +263,8 @@ raising custom errors
 some times we want to raise an error so that further code cannot be executed 
 so we use "raise error" function
 this function allows us to custom built the errors
+there is a base exception method in python ie,
+raise BaseException()
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 41
 short hand if else
@@ -289,6 +291,26 @@ we can use enumerate function
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 43
 virtual environment in python
+virtual environment in python :
+it is a private isolater python installad
+It creates a separate space where:
+*Python packages are installed
+*Dependencies are managed
+*Versions are controlled
+Without affecting your system Python.
+imagin if you install torch version 2.1
+later you need torch version 1.13 for a specific project 
+they conflict each other one project may break 
+and now we are debugging for hours
+venv prevents that
+when we create a virtual environment it creates a forder for venv
+it copies light weight python interpreter inside 
+it creates its own liberaries ,scripts,packages etc
+
+STEPS
+>python -m venv foldername
+>foldername\scripts\activate
+then it will show you (foldername)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 python 44
 how import function works
