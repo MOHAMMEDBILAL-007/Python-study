@@ -303,7 +303,7 @@ later you need torch version 1.13 for a specific project
 they conflict each other one project may break 
 and now we are debugging for hours
 venv prevents that
-when we create a virtual environment it creates a forder for venv
+when we create a virtual environment it creates a folder for venv
 it copies light weight python interpreter inside 
 it creates its own liberaries ,scripts,packages etc
 
@@ -872,7 +872,16 @@ win32api functionalities
 *Hardware Interaction
 *Registry (advanced but important)
 
-1. display a message window 
+1. system information
+OS stores sysem information in memory we use these functions to access that information
+asking the system for the identity of the system 
+ex: computer name, user name, process ID, OS version , directories
+windows directory, system directry, drive info.
+these are read only quaries Not modifying anything
+this is how all system tools work like task manager, control panel, etc
+they just call APIs and then display the results 
+
+2. display a message window 
 win32api.messagebox(handler,message,titel of the window,const)
 handler -> id given by the windows ie for the message box = 0
 const -> (uType) this constant or an integer flag decides what type of buttons the messege box provide ie, ok,cancle,retry,continue,yes,no
@@ -898,7 +907,7 @@ const -> (uType) this constant or an integer flag decides what type of buttons t
 	
 	using '|' -> bitwise OR  it combines multiple flags 
 	we can set the default button 
-	we can change how thw window behaves
+	we can change how the window behaves
 	the constants are grouped into 3 bitfiles ie button bits, icon bits ,behaviour bits
 	
 	each message box gives a return value 
@@ -916,11 +925,20 @@ const -> (uType) this constant or an integer flag decides what type of buttons t
 		print("User said YES")
 		
 2. file operations 
-the program can interact with storage devices ,windows file system through win32api
+the program can interact with storage devices ,windows file system through win32file
+(we use win32file
 Copying files
 Moving files
 Deleting files
-Creating directories
-File attributes
-Error handling
+Creating directories (we can create nested directries)
+File attributes(it provides a masked integer attribute)
+Error handling(trying to access files that no longer exist or have restricted access may cause error)
 Understanding paths deeply
+
+3. process and program execution 
+program is a collection or instructions and date stored on disk
+process is an active execution instance managed by windows.
+windows give each process an identifier called a -> PID or process id 
+processID vs handle : 
+pid is used to identify a process
+A handle through which your process can interact with another process, subject to permissions

@@ -25,10 +25,14 @@ class parent1:
     def area(self):
         return self.x * self.y
 class child1(parent1):
-    def __init__(self,radius):
-        super().__init__(radius,radius)
+    def __init__(self,radius,x,y):
+        super().__init__(x,y)
         self.radius = radius
     def area(self):
         return (3.14 * (self.radius*self.radius))
-circ= child(4)
+    def morph(self):
+        return (self.x*self.y)
+circ= child1(4,3,4)
 print(circ.area())
+print(circ.morph())
+

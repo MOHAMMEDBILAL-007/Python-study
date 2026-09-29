@@ -5,7 +5,7 @@
 def cube(x):
     return x*x*x
 print(cube(2))
-
+ 
 # if i need to pass a list as an argument directly it will give me an error
 # so we use a loop and a new list to perform the operation
 l1 =[1,2,3,4,5,6,7,8]
