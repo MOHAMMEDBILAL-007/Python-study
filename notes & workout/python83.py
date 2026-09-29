@@ -1,4 +1,7 @@
-import win32api
-import win32con
-
-win32api.MessageBox(0,"hello world","python 83",win32con.MB_OK)
+import win32file
+import os
+print(os.getcwd())
+os.chdir("D:/learning/Python-study/notes & workout")
+print(os.getcwd())
+win32file.CopyFile("darkblade_uids.txt","wintest.txt",False)
+win32file.DeleteFile("wintest.txt")
