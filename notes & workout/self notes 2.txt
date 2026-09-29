@@ -942,3 +942,45 @@ windows give each process an identifier called a -> PID or process id
 processID vs handle : 
 pid is used to identify a process
 A handle through which your process can interact with another process, subject to permissions
+use win32process to create process and more 
+win32process.CreateProcess(...)
+
+but there is a more simpler way to do this but with less flexiblity 
+win32api.ShellExecute(...)
+
+shellexecute is high level and convenient 
+createprocess is low level and more control
+first lets learn what is simple ie, ShellExecute 
+win32api.ShellExecute(
+    0,
+    "open",
+    "notepad.exe"
+    ,None
+    ,None
+    ,1
+)
+
+arg1 : 0 ->(hwnd) represents parent window in this specific case we are saying that there is no specific parent to this window 
+arg2 : "open" ->(operation/verb) saying open this 
+arg3 : "notepad.exe" ->(program/document) asking windows shell to launch it 
+arg4 : None ->(command-line parameters) some programs require some parameters this is where we can supply those
+arg5 : None ->(this is where we provide working directry) None means we are not explicitly providing one
+arg6 : 1 ->(windows api constant) 1 corresponds to the win32com's SW_SHOWNORMAL ie, it tells the windows to open the window in its orignal shape/size ie, minimized/maximized
+
+while shellexecute tells windows to open something windows will figur out what parameters require by default
+,createprocess tells windows to create a process with this exact parameters 
+
+structure of process:
+Process
+│
+├── Virtual address space
+├── Executable code
+├── Loaded DLLs
+├── Environment
+├── Handles
+├── Security information
+└── Threads
+
+Threads are what actually executes instructions 
+thread is a smallest unit of execution in an operting system 
+threads are individual sequence of of instructions running inside that process.
