@@ -941,6 +941,8 @@ process is an active execution instance managed by windows.
 windows give each process an identifier called a -> PID or process id 
 processID vs handle : 
 pid is used to identify a process
+handle is an abstract, system-managed pointer or reference that allows an application to interact with a specific resource—such as 
+a process, thread, file, or registry key—without directly accessing kernel memory
 A handle through which your process can interact with another process, subject to permissions
 use win32process to create process and more 
 win32process.CreateProcess(...)
@@ -966,7 +968,7 @@ arg3 : "notepad.exe" ->(program/document) asking windows shell to launch it
 arg4 : None ->(command-line parameters) some programs require some parameters this is where we can supply those
 arg5 : None ->(this is where we provide working directry) None means we are not explicitly providing one
 arg6 : 1 ->(windows api constant) 1 corresponds to the win32com's SW_SHOWNORMAL ie, it tells the windows to open the window in its orignal shape/size ie, minimized/maximized
-
+it returns a integer value ie, an instance handle most of the cases indicating successful execution historically api uses values greater than 35 to show success
 while shellexecute tells windows to open something windows will figur out what parameters require by default
 ,createprocess tells windows to create a process with this exact parameters 
 
@@ -984,3 +986,52 @@ Process
 Threads are what actually executes instructions 
 thread is a smallest unit of execution in an operting system 
 threads are individual sequence of of instructions running inside that process.
+
+now lets follow up with createprocess
+What does CreateProcess() actually do?
+CreateProcess()
+      ↓
+Windows creates a new process
+      ↓
+Windows creates its initial thread
+      ↓
+Windows gives us information about both
+
+syntax
+import win32process
+import win32con
+
+result = win32process.CreateProcess(
+    "C:/Windows/System32/notepad.exe",
+    "notepad.exe",
+    None,
+    None,
+    False,
+    0,
+    None,
+    None,
+    win32process.STARTUPINFO()
+)
+
+i know its a lot of arguments but they are very important
+arg1 : "C:/Windows/System32/notepad.exe"->(appName) this is the executable application name ie,(C:\Windows\System32\notepad.exe)
+	we can give the name here too but we need to give the app location 
+arg2 : "notepad.exe" ->(commandline)tells windows what command to execute 
+	we can pass arguments too if required 
+	NOTE : what if i provided appname and the commandline _> application will just open without any problem 
+		we can also just give the appname ie the app location in the drive but it miht cause problems for the applications with arguments 
+		we use command line and appName to be specific this is the right way 
+arg3&4 :None & None -> these correspond to security attributes for process and thread here we anr not providing any custom attributes "None" means use default behaviour
+arg5 : False -> (bInheritHandles) this argument is used to inherit inheritable handles from the parent process 
+arg6 : 0 ->(creation flag) we have already talked about flags
+arg7 : None -> (environment) it controls environment variables available to the new process "None" means process inherits from its parent 
+	NOTE : Every process in modern operating systems has a parent process—there is no such thing as a process with zero parent process.
+	When you boot your computer, the OS kernel starts the very first process (often called the "root" or "init" process). From that point on, 
+	every single process created on the computer is a child of an existing process
+arg8 : None -> (current directry) this controls which is the working directry of the new process 
+arg9 : win32process.STARTUPINFO() -> startup information 
+
+create process returns a tuple of : process handle, thread handle, process id, thread id .
+
+handles are os property so it needs to be closed so pwin32api provides a way to do so 
+win32api.CloseHandle(handle)# here handle is the object that we get in return when we create a process 
