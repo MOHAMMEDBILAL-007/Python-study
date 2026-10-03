@@ -1023,7 +1023,7 @@ arg2 : "notepad.exe" ->(commandline)tells windows what command to execute
 		we use command line and appName to be specific this is the right way 
 arg3&4 :None & None -> these correspond to security attributes for process and thread here we anr not providing any custom attributes "None" means use default behaviour
 arg5 : False -> (bInheritHandles) this argument is used to inherit inheritable handles from the parent process 
-arg6 : 0 ->(creation flag) we have already talked about flags
+arg6 : 0 ->(creation flag) we have already talked about flags 0 means no special flag being requested
 arg7 : None -> (environment) it controls environment variables available to the new process "None" means process inherits from its parent 
 	NOTE : Every process in modern operating systems has a parent process—there is no such thing as a process with zero parent process.
 	When you boot your computer, the OS kernel starts the very first process (often called the "root" or "init" process). From that point on, 
@@ -1035,3 +1035,13 @@ create process returns a tuple of : process handle, thread handle, process id, t
 
 handles are os property so it needs to be closed so pwin32api provides a way to do so 
 win32api.CloseHandle(handle)# here handle is the object that we get in return when we create a process 
+lets move to the next important part of process management 
+when we create a process we get process handle, thread handle, pid, tid 
+now we need to learn how to wait for a process to end before continuing with the code 
+we use win32event for this 
+win32event.WaitForSingleObject(
+    phandle,
+    win32event.INFINITE
+)
+this worked on cmd not notepad because apperantly the new notepad doesnt work simply 
+never think that a program = a window = a process 
